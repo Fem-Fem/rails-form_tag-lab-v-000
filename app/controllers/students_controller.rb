@@ -9,8 +9,8 @@ class StudentsController < ApplicationController
   end
 
   def create
-    Post.create(title: params[:post][:title], description: params[:post][:description])
-redirect_to posts_path
+    Student.create(first_name: params[:first_name], last_name: params[:last_name])
+    redirect_to posts_path
   end
 
 end
